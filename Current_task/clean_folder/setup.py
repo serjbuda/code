@@ -3,7 +3,7 @@ from setuptools import setup, find_namespace_packages
 setup(name='clean_folder',
       version='1',
       description='Normalize',
-      url='http://github.com/dummy_user/useful',
+      url='https://github.com/serjbuda/code/tree/main/Current_task/clean_folder',
       author='Buda Serj',
       author_email='buda_serj@yahoo.com',
       license='MIT',

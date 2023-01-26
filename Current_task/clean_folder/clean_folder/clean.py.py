@@ -59,7 +59,7 @@ def normalize(path):
                 shutil.move(path+files, path+'videos'+files)
             elif '.mov' in files and not os.path.exists(path+'videos'+files):
                 shutil.move(path+files, path+'videos'+files)
-            elif '.mkv' in files and not os.path.exists(path+'videos/'+files):
+            elif '.mkv' in files and not os.path.exists(path+'videos'+files):
                 shutil.move(path+files, path+'videos'+files)
             elif '.doc' in files and not os.path.exists(path+'documents'+files):
                 shutil.move(path+files, path+'documents'+files)
