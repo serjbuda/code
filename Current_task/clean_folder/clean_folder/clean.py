@@ -107,9 +107,11 @@ def normalize(path):
                     if not os.path.exists(dir_name+item+' archive folder'):
                         os.mkdir(dir_name+item+' archive folder')
                         gz_ref.decompress(dir_name+item+' archive folder')
-if __name__ == '__main__':
+def main():
     folder_unpacker_cleaner(path)
     trnasliterator(path)
     sorter(path)
     unarchiver(path)
     normalize(path)
+if __name__ == '__main__':
+    main()
