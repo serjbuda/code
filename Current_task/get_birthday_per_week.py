@@ -64,6 +64,7 @@ def get_birthdays_per_week(users):
                   "\n"+mond+"\n"+tuesd+"\n"+wed+"\n"+thur+"\n"+fri)
 def check_if_birthday_next_week(users):
     week_greets=""
+    wg=[]
     dict_list=[]
     current_datetime = datetime.now()
     one_week_interval = timedelta(weeks=1)
@@ -73,7 +74,8 @@ def check_if_birthday_next_week(users):
         dict_list = list(j.values())
         birth = dict_list[1].date()
         if birth.day == today_plus_week.day and birth.month == today_plus_week.month:
-            week_greets+=dict_list[0]+", "
+            wg.append(dict_list[0])
+    week_greets = week_greets+', '.join(wg)
     if week_greets !="":
         return print("In next 7 days we greet: ",week_greets)
     else:
