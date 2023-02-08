@@ -1,3 +1,4 @@
+import re
 def error_input(func):
     def inner(command_input):
         check_list=["close", "exit", "good bye","hello","good bye","show all"]
@@ -13,14 +14,20 @@ def error_input(func):
         elif command_split[0] == 'change' and len(command_split) < 3:
             print("Give me name and phone please.")
         elif command_split[0] == 'add' and len(command_split) == 3:
-            result = func(command_input)
-            return result
+            if len(re.findall(r"[a-zA-Z]", command_split[2])) >0:
+                print("Phone number cannot contain characters.")
+            else:
+                result = func(command_input)
+                return result
         elif command_split[0] == 'phone' and len(command_split) == 2:
             result = func(command_input)
             return result
         elif command_split[0] == 'change' and len(command_split) == 3:
-            result = func(command_input)
-            return result
+            if len(re.findall(r"[a-zA-Z]", command_split[2])) >0:
+                print("Phone number cannot contain characters.")
+            else:
+                result = func(command_input)
+                return result
         else:
             print("Input correct command.")
     return inner
