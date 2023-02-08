@@ -56,6 +56,7 @@ def handler(parser_output):
     if type(parser_output) == str:
         split_list=parser_output.split()
         name_phone_dict.update({"Name": split_list[0].capitalize(), "Phone": split_list[1]})
+        print(f"Contact with name {split_list[0].capitalize()} and phone {split_list[1]} added")
         return name_phone_dict
     elif type(parser_output) == list:
         return parser_output
