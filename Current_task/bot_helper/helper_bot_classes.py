@@ -78,12 +78,21 @@ class Phone(Record, Field):
 if __name__ == "__main__":
     while True:
         print("Bot command list: hello, add ..., change ..., phone ..., show all, good bye, close, exit.")
-        print("Class comands: record")
         command_input = input("Input your command: ")
         lower_command=command_input.lower()
         command_split=lower_command.split()
         bot = Bot(command_input, lower_command, command_split)
         record = Record(lower_command)
+        name=Name()
+        phone=Phone()
+        ab= AddressBook()
+        ab.add_record(rec)
         bot.error_cases()
         bot.command_operator()
         record.name_phone_record()
+        name = Name('Bill')
+        phone = Phone('1234567890')
+        rec = Record(name, phone)
+        ab = AddressBook()
+        ab.add_record(rec)
+        
