@@ -1,0 +1,5 @@
+Модуль для таблиць:
+https://pypi.org/project/prettytable/
+http://patorjk.com/software/taag/#p=display&f=X-Pose&t=HELP%20TEST
+prompt-toolkit
+https://pypi.org/project/prompt-toolkit/0.5/
